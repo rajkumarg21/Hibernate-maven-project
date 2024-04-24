@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE hibernate-configuration SYSTEM 
+
+<!DOCTYPE hibernate-configuration PUBLIC  
+          "-//Hibernate/Hibernate Configuration DTD 5.3//EN"
 "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
 <hibernate-configuration>
 	<session-factory>
@@ -32,10 +34,13 @@
 			true
 		</property>
 
+
+      <!-- List of java mapping files while using annotation based -->
 		<mapping class="com.raj.Customer" />
 		<mapping class="com.raj.Order" />
+		
 		<!-- List of XML mapping files -->
-		<!-- <mapping resource = "Employee.hbm.xml"/> -->
+		 <mapping resource = "customer.hbm.xml"/> 
 
 	</session-factory>
 </hibernate-configuration>
